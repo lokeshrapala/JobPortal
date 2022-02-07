@@ -1,0 +1,322 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Epitychis Info Labs Pvt.Ltd</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i"/>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/footer.css' %}"/>
+</head>
+<style>
+    .navbar {
+        padding: 30px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    .button {
+        background-color: #4CAF50; /* Green */
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        -webkit-transition-duration: 0.4s; /* Safari */
+        transition-duration: 0.4s;
+        border-radius: 5%;
+    }
+
+    .button1 {
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    /* The Modal (background) */
+    .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        padding-top: 100px; /* Location of the box */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0, 0, 0); /* Fallback color */
+        background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+    }
+
+    /* Modal Content */
+    .modal-content {
+        position: relative;
+        background: #f1f1f1;
+        margin: auto;
+        padding: 0;
+        border: 1px solid #888;
+        width: 60%;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        -webkit-animation-name: animatetop;
+        -webkit-animation-duration: 0.4s;
+        animation-name: animatetop;
+        animation-duration: 0.4s
+    }
+
+    /* Add Animation */
+    @-webkit-keyframes animatetop {
+        from {
+            top: -300px;
+            opacity: 0
+        }
+        to {
+            top: 0;
+            opacity: 1
+        }
+    }
+
+    @keyframes animatetop {
+        from {
+            top: -300px;
+            opacity: 0
+        }
+        to {
+            top: 0;
+            opacity: 1
+        }
+    }
+
+    /* The Close Button */
+    .close {
+        color: black;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    .modal-header {
+        padding: 2px 16px;
+        background-color: #d0d0d0;
+        color: black;
+    }
+
+    .modal-body {
+        padding: 2px 16px;
+    }
+
+    .modal-footer {
+        padding: 2px 16px;
+
+        color: white;
+    }
+</style>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid ">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">
+                <!-- <img src="img/1.png" class="img-circle logo_border" height="62" width="62" /> -->
+                <img src="{% static 'img/logo.png' %}" class="img-circle logo" height="100" width="100"
+                     style="margin-left: -35px !important;">
+                <h3 style="position: absolute;left: 90px;;color: #fff;;top: 31px;">EPITYCHIS INFO LAB.PVT</h3>
+            </a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/">HOME</a></li>
+                <li><a href="/#what_we_are">WHAT WE ARE</a></li>
+                <li><a href="/ourprojects">OUR PROJECTS</a></li>
+                <li><a href="/careers">CAREERS</a></li>
+                <li><a href="#myFooter">CONTACT</a></li>
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+</nav>
+
+<div class="job-summary" style="margin-top: 120px;color: black;">
+    <h1 style="text-align: center;border-botton:1px solid #ccc;font-weight: bolder;">Our Careers</h1>
+    <p style="text-align:center;margin: 0 auto;padding: 48px 5%;max-width: 900px;font-size: 20px;;word-spacing: 3px;">
+        We're looking for a talented python developer to help build an web application that transforms
+        how millions of people discover and collect inspiration everyday. You should have experience
+        building beautiful high-performance applications on mobile.</p>
+
+</div>
+
+<section>
+    <div class="container" style="color: black;">
+        <h2 style="margin-bottom: 90px;">Open Positions</h2>
+        <table class="table">
+            <thead>
+            <tr>
+                <th>JobId</th>
+                <th>Position</th>
+                <th>Location</th>
+                <th>Status</th>
+            </tr>
+            </thead>
+            <body>
+            {% for order in order %}
+                <tr>
+                    <td style="text-align: left;">{{ order.job_id }}</td>
+
+                    <td style="text-align: left;">{{ order.job_title }}</td>
+                    <td style="text-align: left;">{{ order.job_location }}</td>
+                    <td>
+                        <button class="button button1" id="myBtn">Job Description</button>
+                    </td>
+                </tr>
+            {% endfor %}
+            </body>
+        </table>
+    </div>
+</section>
+
+<div id="myModal" class="modal" style="margin-top: 51px;">
+
+    <!-- Modal content -->
+    <div class="modal-content" style="padding-bottom: 7.5vh;">
+        <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2 style="font-size: 20px !important;font-weight: 700 !important;"></h2>
+        </div>
+        <div class="modal-body">
+
+        {% for order in order %}
+
+
+                {{  order.job_description }}
+
+        {% endfor %}
+
+
+            <!-- <p>Some other text...</p> -->
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-success">Apply</button>
+        </div>
+    </div>
+
+</div>
+
+<footer id="myFooter" style="margin-top: 5vh;">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                <h4 class="text-uppercase  text-strong">INDUSTRIES</h4>
+                <hr>
+                <ul style="list-style: none; padding-left: 0px;">
+                    <li><a href="#"></a></li>
+                    <li><a href="#">DelveIP</a></li>
+                    <li><a href="#">SpielData</a></li>
+                    <li><a href="#">We Unita</a></li>
+                    <li><a href="#">Hello Properties</a></li>
+                    <li><a href="#">International IP Filing</a></li>
+                </ul>
+            </div>
+
+            <div class="col-sm-4">
+
+                <h4 class="text-uppercase text-strong">Address</h4>
+                <hr>
+                <div>
+
+                    <p><i class="fa fa-home"></i><a> SF-17, 3rd floor, <br>
+                        parsvnath Bibhab Plaza,<br>
+                        Commercial Belt,<br>
+                        Alpha-1;<br>
+                        Gautam Buddha Nagar,<br>
+                        Greater Noida,<br>
+                        Uttar Pradesh-201308.<br></a>
+                        <i class="fa fa-phone"> </i><a>+91 1204116654s<br></a>
+                        <i class="fa fa-envelope"></i><a> info@epitychisinfolabs.com</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-sm-4">
+                <h4 class="text-uppercase text-strong">Contact us</h4>
+                <hr>
+                <form method="post" action=""> {% csrf_token %}
+                    <input name="firstname" type="text" class="feedback-input" placeholder="Name"/>
+                    <input name="email" type="text" class="feedback-input" placeholder="Email"/>
+                   <input name="mobno" type="text" class="feedback-input" placeholder="Mobno"/>
+
+                    <textarea name="message" class="feedback-input" placeholder="Comment"></textarea>
+                    <input type="submit" value="SUBMIT"/>
+                </form>
+            </div>
+
+            <div class="col-sm-4">
+                <p class="right">
+                <ul class="social-nav model-7">
+                    <li><a class="twitter" href=""><i class="fa fa-twitter"></i></a></li>
+                    <li><a class="facebook" href=""><i class="fa fa-facebook"></i></a></li>
+                    <li><a class="google-plus" href=""><i class="fa fa-google-plus"></i></a></li>
+                    <li><a class="linkedin" href=""><i class="fa fa-linkedin"></i></a></li>
+                    <li><a class="pinterest" href=""><i class="fa fa-pinterest-p"></i></a></li>
+                </ul>
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="footer-copyright  ">
+
+        <p class="left">© 2018 Epitychis Info Lab Pvt. Ltd </p>
+
+    </div>
+</footer>
+
+<script src="{% static 'js/jquery-3.3.1.min.js' %}" type="text/javascript"></script>
+<script src="{% static 'js/bootstrap.min.js' %}" type="text/javascript"></script>
+<script src="{% static 'js/mainjs.js' %}" type="text/javascript"></script>
+<script>
+    // Get the modal
+    var modal = document.getElementById('myModal');
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("myBtn");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks the button, open the modal
+    btn.onclick = function () {
+        modal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+        modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,169 @@
+{% load  static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to Epitychis</title>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Serif:400,400i,700|Yanone+Kaffeesatz" rel="stylesheet">
+    <link rel="stylesheet" href="{%  static 'css/bootstrap.min.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/style.css'%}"/>
+    <link rel="stylesheet" href="{% static 'css/footer.css'%}"/>
+    <script src="{% static 'js/jquery-3.3.1.min.js'%}"></script>
+    <script src="{% static 'js/bootstrap.min.js'%}"></script>
+
+<style>
+.navbar{
+  padding: 30px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+</style>
+</head>
+<body>
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid ">
+                <div class="navbar-header">
+
+                    <a class="navbar-brand" href="/">
+
+                        <img src="{% static 'img/logo.png '%}" class="img-circle logo" height="100" width="100" style=" float:left; ">
+                        <h3 style="position: absolute;left: 131px;;color: #fff;;top: 31px;">EPITYCHIS INFO LAB.PVT</h3>
+                    </a>
+                </div>
+                <div id="navbar" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/">HOME</a></li>
+                        <li><a href="#whatweare">WHAT WE ARE</a></li>
+                        <li><a href="/ourprojects">OUR PROJECTS</a></li>
+                        <li><a href="/careers">CAREERS</a></li>
+                        <li><a href="#contact">CONTACT</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+<div class="container-fluid main_image">
+    <img src="{% static 'img/background.jpg' %}" class="img-responsive" alt="main image" style="max-height: 600px; width:100%"/>
+    <img src="{% static 'img/png.png' %}"  class="img-responsive dot_png" style="max-height: 600px; width:100%"/>
+
+</div>
+        <br><br><br>
+
+            <section class="container" style="padding-bottom:20px;" id="whatweare">
+                <div class="row What_we_Are" align="center">
+                    <h1 align="center" id="bar_png">What We Are</h1>
+                        <img src="{% static 'img/bar_png.png'%}" class="img-responsive bar_png"  width="150" align="center" />
+                </div><hr>
+                <div class="col-sm-6" style="background: #3c763d; padding-bottom:50px; margin-bottom: 20px;">
+                    <h2 align="center">Description</h2><br>
+                        <p align="justify" style="font-size: 18px;">As a startup but with a strong understanding about the industry having a great man time experience has
+                            collaborated with a determination to innovate which is our key focus and implement the required lacunae space for the a
+                            success for human kind in various aspect via highly acknowledged domain
+                            that is software has made our existence and we as a strong team focus on that to achieve.
+                        </p>
+
+                </div>
+                <div class="col-sm-6">
+                    <img src="{% static 'img/1.jpg'%}"  class="img-responsive"/>
+                </div>
+            </section>
+
+
+
+
+<section class="">
+  <div class="container">
+      <div class="row">
+            <h2 class="headcolor center"> Our <span class="text-primary">Certifications :</span></h2>
+                <div class="certificate">
+                    <a> <img src="{% static 'img/CMMI-Level-3.png'%}" style="float: left;" hspace=""></a>
+                        <img src="{%  static 'img/msme.png'%}" style="float: left;" hspace="15">
+                </div>
+      </div>
+  </div>
+</section>
+
+
+
+
+<footer id="myFooter" style="margin-top: 5vh;">
+    <section class="container" style="padding-bottom:20px;" id="contact">
+        <div class="container">
+            <div class="row">
+               <div class="col-sm-4">
+                  <h4 class="text-uppercase  text-strong">INDUSTRIES</h4>
+                  <hr>
+                  <ul style="list-style: none; padding-left: 0px;">
+                        <li><a href="#"></a></li>
+                        <li><a href="#">DelveIP</a></li>
+                        <li><a href="#">SpielData</a></li>
+                        <li><a href="#">We Unita</a></li>
+                        <li><a href="#">Hello Properties</a></li>
+                        <li><a href="#">International IP Filing</a></li>
+                    </ul>
+                </div>
+
+        <div class="col-sm-4">
+
+					<h4 class="text-uppercase text-strong">Address</h4>
+					<hr>
+					<div>
+
+          <p ><i class="fa fa-home"></i><a> SF-17, 3rd floor, <br>
+                                       p201308.<br></a>
+              <i class="fa fa-phone"> </i><a>arsvnath Bibhab Plaza,<br>
+                                       Commercial Belt,<br>
+                                       Alpha-1;<br>
+                                       Gautam Buddha Nagar,<br>
+                                       Greater Noida,<br>
+                                       Uttar Pradesh-+91 1204116654s<br></a>
+              <i class="fa fa-envelope"></i><a> info@epitychisinfolabs.com</a>
+          </p>
+          </div>
+        </div>
+
+     <div class="col-sm-4">
+         <h4 class="text-uppercase text-strong">Contact us</h4>
+         <hr>
+              <form method="post" action="">
+                  {% csrf_token %}
+                  <input name="firstname" type="text" class="feedback-input" placeholder="Name" />
+                  <input name="email" type="text" class="feedback-input" placeholder="Email" />
+                  <input name="mobno" type="text"class="feedback-input" placeholder="mobno" ><br>
+                  <textarea name="message" class="feedback-input" placeholder="Comment"></textarea>
+                  <input type="submit" value="SUBMIT"/>
+             </form>
+       </div>
+</section>
+         <div class="col-sm-4">
+              <p class="right">
+               <ul class="social-nav model-7">
+                <li><a class="twitter" href=""><i class="fa fa-twitter"></i></a></li>
+                <li><a class="facebook" href=""><i class="fa fa-facebook"></i></a></li>
+                <li><a class="google-plus" href=""><i class="fa fa-google-plus"></i></a></li>
+                <li><a class="linkedin"  href=""><i class="fa fa-linkedin"></i></a></li>
+                <li><a class="pinterest"  href=""><i class="fa fa-pinterest-p"></i></a></li>
+              </ul>
+                          </p>
+        </div>
+
+</div>
+</div>
+
+
+
+
+        <div class="footer-copyright  ">
+
+            <p class="left">© 2018 Epitychis Info Lab Pvt. Ltd </p>
+
+        </div>
+</footer>
+
+
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+{% extends 'dammi.html' %}
+{% load static %}
+{% block nav %}
+<nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid ">
+          <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="index.html">
+                  <!-- <img src="img/1.png" class="img-circle logo_border" height="62" width="62" /> -->
+                  <img src="{% static 'img/logo.png'%}" class="img-circle logo" height="100" width="100" style="margin-left: -43px;">
+                  <h3 style="position: absolute;left: 91px;;color: #fff;;top: 31px;">EPITYCHIS INFO LAB.PVT</h3>
+              </a>
+          </div>
+          <div id="navbar" class="collapse navbar-collapse">
+              <ul class="nav navbar-nav navbar-right">
+                  <li><a href="#body">HOME</a></li>
+                  <li><a href="#what_we_are">WHAT WE ARE</a></li>
+                  <li><a href="#we_are_into">WE ARE INTO</a></li>
+                  <li><a href="ourprojects.html">OUR PROJECTS</a></li>
+                  <li><a href="careers.html">CAREERS</a></li>
+                  <li><a href="#contact">CONTACT</a></li>
+              </ul>
+          </div><!--/.nav-collapse -->
+      </div>
+</nav>
+{% endblock %}
